@@ -1,0 +1,51 @@
+header{
+    color: var(--text-color);
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 10px 3px;
+    background-color: rgb(59, 50, 50);
+}
+
+
+/* ..........Logo.......... */
+
+.logo {
+    width: 50%;
+    margin: 0 2px 0 0;
+    /* align-self: flex-start; */
+}
+
+.logo img {
+    width: 100%;
+    /* mix-blend-mode: luminosity; */
+    /* filter: contrast(120%); */
+    /* -webkit-filter: grayscale(100%); */
+}
+
+
+
+/* ..........Navbar.......... */
+
+
+
+
+
+
+
+
+@media (min-width:450px) {
+
+    /* ..........Logo.......... */
+
+    .logo{
+        width: 50%;
+        margin: 0;
+    }
+
+   
+
+}
