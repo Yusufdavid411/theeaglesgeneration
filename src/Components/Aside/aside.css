@@ -1,23 +1,21 @@
-/* Ensure the container takes up full screen */
 .video-container {
   position: relative;
   width: 100%;
-  height: 75vh;
+  height: 78vh;
   overflow: hidden;
 }
 
-/* Video should cover the whole screen */
 .video-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures video scales properly */
-  z-index: -1; /* Sends video behind other content */
+  object-fit: cover;
+  z-index: -1;
 }
 
-/* Mute/Unmute button styling */
+/* Mute/Unmute button */
 .mute-btn {
   position: absolute;
   top: 20px;
@@ -31,13 +29,11 @@
   border-radius: 5px;
 }
 
-/* Button hover effect */
 .mute-btn:hover {
   background: rgba(255, 255, 255, 0.8);
   color: black;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .mute-btn {
     top: 10px;

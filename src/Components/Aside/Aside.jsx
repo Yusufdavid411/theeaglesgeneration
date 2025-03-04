@@ -22,7 +22,7 @@ const Aside = () => {
     <div className="video-container">
       {/* Background Video */}
       <video ref={videoRef} autoPlay loop muted className="video-bg" playsInline>
-        <source src="/videos/background.mp4" type="video/mp4" />
+        <source src="/videos/tegen_bgvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
