@@ -15,12 +15,12 @@ header{
 
 .logo {
     width: 50%;
-    margin: 0 2px 0 0;
+    margin: 0 2px 0 5px;
     /* align-self: flex-start; */
 }
 
 .logo img {
-    width: 100%;
+    width: 80%;
     /* mix-blend-mode: luminosity; */
     /* filter: contrast(120%); */
     /* -webkit-filter: grayscale(100%); */

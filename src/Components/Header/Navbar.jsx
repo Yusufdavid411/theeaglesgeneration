@@ -18,10 +18,12 @@ const Navbar = () => {
 
         {/* Menu Items */}
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">Discover Us</a></li>
+          <li><a href="#">Download</a></li>
+          <li><a href="#">Our Webtree</a></li>
+          <li><a href="#">Our Channeltree</a></li>
+          <li><a href="#">Give To Us Today</a></li>
         </ul>
       </div>
     </nav>

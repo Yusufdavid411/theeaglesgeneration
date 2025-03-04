@@ -7,7 +7,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className="content" id="content">
+    <div className="conten" id="content">
 
 
       <Header />
