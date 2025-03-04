@@ -1,45 +1,48 @@
 /* Ensure the container takes up full screen */
 .video-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+/* Video should cover the whole screen */
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video scales properly */
+  z-index: -1; /* Sends video behind other content */
+}
+
+/* Mute/Unmute button styling */
+.mute-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Button hover effect */
+.mute-btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .mute-btn {
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
   }
-  
-  /* Video should cover the whole screen */
-  .video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures video scales properly */
-    z-index: -1; /* Sends video behind other content */
-  }
-  
-  /* Button styling */
-  .action-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    font-size: 18px;
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  /* Hide the button if not needed */
-  .hide-button .action-btn {
-    display: none;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .video-container {
-      height: 100vh;
-    }
-  }
-  
+}

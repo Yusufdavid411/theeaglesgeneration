@@ -1,6 +1,20 @@
 import './aside.css'
+import React, { useRef, useState } from "react";
+
 
 const Aside = () => {
+
+  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  // Toggle mute/unmute function
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
   return (
     <div className="video-container">
       {/* Background Video */}
@@ -9,8 +23,10 @@ const Aside = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Optional Button */}
-      <button className="action-btn">THE EAGLES GENERATION</button>
+      {/* Mute/Unmute Button */}
+      <button className="mute-btn" onClick={toggleMute}>
+        {isMuted ? "🔇 Mute" : "🔊 Unmute"}
+      </button>
 
       <div></div>
     </div>
