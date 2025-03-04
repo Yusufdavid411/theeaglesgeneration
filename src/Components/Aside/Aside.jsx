@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "./Aside.css";
+import "./aside.css";
 
 const Aside = () => {
   const videoRef = useRef(null);
