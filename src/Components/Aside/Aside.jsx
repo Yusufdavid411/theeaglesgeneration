@@ -1,36 +1,37 @@
-import './aside.css'
 import React, { useRef, useState } from "react";
-
+import "./Aside.css";
 
 const Aside = () => {
-
   const videoRef = useRef(null);
   const [isMuted, setIsMuted] = useState(true);
 
-  // Toggle mute/unmute function
+  // Ensure video can play with sound
   const toggleMute = () => {
     if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
+      if (isMuted) {
+        videoRef.current.muted = false;
+        videoRef.current.play(); // Ensure play resumes after unmuting
+      } else {
+        videoRef.current.muted = true;
+      }
+      setIsMuted(!isMuted);
     }
   };
 
   return (
     <div className="video-container">
       {/* Background Video */}
-      <video autoPlay loop muted className="video-bg">
-        <source src="/videos/tegen_bgvideo.mp4" type="video/mp4" />
+      <video ref={videoRef} autoPlay loop muted className="video-bg" playsInline>
+        <source src="/videos/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Mute/Unmute Button */}
       <button className="mute-btn" onClick={toggleMute}>
-        {isMuted ? "🔇 Mute" : "🔊 Unmute"}
+        {isMuted ? "🔇 Unmute" : "🔊 Mute"}
       </button>
-
-      <div></div>
     </div>
   );
-}
- 
+};
+
 export default Aside;
