@@ -1,6 +1,7 @@
 import Header from './Components/Header/Header';
 import Aside from './Components/Aside/Aside';
 import Section from './Components/Section/Section';
+import Main from './Components/Main/Main';
 import Footer from './Components/Footer/Footer';
 import './App.css'
 
@@ -11,8 +12,13 @@ function App() {
 
 
       <Header />
+
       <Aside />
+
       <Section />
+
+      <Main />
+
       <Footer />
 
 
