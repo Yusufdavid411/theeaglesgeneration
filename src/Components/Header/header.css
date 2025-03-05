@@ -15,7 +15,7 @@ header{
 
 .logo {
     width: 50%;
-    margin: 0 2px 0 10px;
+    margin: 0 2px 0 15px;
     /* align-self: flex-start; */
 }
 
@@ -61,6 +61,7 @@ header{
   /* Show Menu */
   .mobile-menu.open {
     left: 0;
+    z-index: 1;
   }
   
   /* Close Button Inside Menu */
@@ -94,20 +95,52 @@ header{
     color: #ffcc00;
   }
 
+.tablet-menu {
+  display: none;
+}
 
 
 
 
 
-@media (min-width:450px) {
 
-    /* ..........Logo.......... */
+@media (min-width:700px) {
 
-    .logo{
-        width: 50%;
-        margin: 0;
-    }
+  /* ..........Logo.......... */
 
-   
+  .logo{
+    width: 50%;
+    margin: 10px 2px 10px 20px;
+  }
 
+  .menu-icon {
+    display: none;
+  }
+
+  .tablet-menu {
+    display: flex;
+  }
+
+  /* Menu Items */
+  .tablet-menu ul {
+    list-style: none;
+    text-align: center;
+    padding: 0 8px;
+    display: flex;
+    white-space: nowrap;
+  }
+  
+  .tablet-menu ul li {
+    margin: 20px 0;
+  }
+  
+  .tablet-menu ul li a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .tablet-menu ul li a:hover {
+    color: #ffcc00;
+  }
 }

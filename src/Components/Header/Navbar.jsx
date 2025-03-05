@@ -26,6 +26,18 @@ const Navbar = () => {
           <li><a href="#">Give To Us Today</a></li>
         </ul>
       </div>
+
+      <div className="tablet-menu">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">Discover Us</a></li>
+          <li><a href="#">Download</a></li>
+          <li><a href="#">Our Webtree</a></li>
+          <li><a href="#">Our Channeltree</a></li>
+          <li><a href="#">Give To Us Today</a></li>
+        </ul>
+      </div>
+
     </nav>
   );
 };

@@ -28,7 +28,7 @@ const Aside = () => {
 
       {/* Mute/Unmute Button */}
       <button className="mute-btn" onClick={toggleMute}>
-        {isMuted ? "🔇 Unmute" : "🔊 Mute"}
+        {isMuted ? "🔇" : "🔊 "}
       </button>
     </div>
   );
